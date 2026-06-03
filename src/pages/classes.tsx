@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { motion } from "framer-motion";
 import { Clock, Flame, User } from "lucide-react";
 import boxingImg from "@/assets/class-boxing.jpg";
@@ -7,17 +7,7 @@ import crossfitImg from "@/assets/class-crossfit.jpg";
 import kickboxingImg from "@/assets/class-kickboxing.jpg";
 import { SectionHeader } from "@/components/Section";
 
-export const Route = createFileRoute("/classes")({
-  head: () => ({
-    meta: [
-      { title: "Classes — GULZA GYM" },
-      { name: "description", content: "MMA, Boxing, Kickboxing, CrossFit, Women Fitness and Cardio classes with elite coaches." },
-      { property: "og:title", content: "Classes — GULZA GYM" },
-      { property: "og:description", content: "Train every discipline with elite coaches." },
-    ],
-  }),
-  component: ClassesPage,
-});
+
 
 const classes = [
   { name: "MMA", img: mmaImg, coach: "Marco Silva", schedule: "Mon · Wed · Fri · 19:00", duration: "90 min", level: "All Levels",
@@ -34,7 +24,7 @@ const classes = [
     desc: "High intensity intervals to torch fat and skyrocket your engine." },
 ];
 
-function ClassesPage() {
+export default function ClassesPage() {
   return (
     <section className="py-20">
       <div className="container-x">

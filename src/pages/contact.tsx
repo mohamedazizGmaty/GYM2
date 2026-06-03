@@ -1,21 +1,11 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { SectionHeader } from "@/components/Section";
 
-export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — GULZA GYM" },
-      { name: "description", content: "Book a free trial session or visit our facility in Tunis." },
-      { property: "og:title", content: "Contact — GULZA GYM" },
-      { property: "og:description", content: "Book your free trial today." },
-    ],
-  }),
-  component: ContactPage,
-});
 
-function ContactPage() {
+
+export default function ContactPage() {
   return (
     <section className="py-20">
       <div className="container-x">

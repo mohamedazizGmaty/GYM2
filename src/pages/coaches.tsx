@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { motion } from "framer-motion";
 import { Instagram, Award, Twitter } from "lucide-react";
 import coach1 from "@/assets/coach-1.jpg";
@@ -6,17 +6,7 @@ import coach2 from "@/assets/coach-2.jpg";
 import coach3 from "@/assets/coach-3.jpg";
 import { SectionHeader } from "@/components/Section";
 
-export const Route = createFileRoute("/coaches")({
-  head: () => ({
-    meta: [
-      { title: "Coaches — GULZA GYM" },
-      { name: "description", content: "Meet our champion coaches — boxing, MMA, kickboxing and fitness specialists." },
-      { property: "og:title", content: "Coaches — GULZA GYM" },
-      { property: "og:description", content: "Champion coaches forged in competition." },
-    ],
-  }),
-  component: CoachesPage,
-});
+
 
 const coaches = [
   { name: "Karim Aziz", role: "Head Boxing Coach", img: coach1, exp: "15+ years", certs: ["AIBA Certified", "Pro Boxing Coach"],
@@ -27,7 +17,7 @@ const coaches = [
     bio: "Veteran MMA fighter turned coach. Blends grappling, striking and conditioning into one ruthless program." },
 ];
 
-function CoachesPage() {
+export default function CoachesPage() {
   return (
     <section className="py-20">
       <div className="container-x">

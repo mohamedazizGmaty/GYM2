@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Dumbbell, Flame, Trophy, Users, Check, Star, Quote } from "lucide-react";
 import heroImg from "@/assets/hero-fighter.jpg";
@@ -11,19 +11,7 @@ import coach2 from "@/assets/coach-2.jpg";
 import coach3 from "@/assets/coach-3.jpg";
 import { SectionHeader } from "@/components/Section";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "GULZA GYM — Train Like a Fighter. Live Like a Champion." },
-      { name: "description", content: "Premium combat sports and fitness platform. MMA, Boxing, Kickboxing, CrossFit, personal coaching and more." },
-      { property: "og:title", content: "GULZA GYM" },
-      { property: "og:description", content: "Train Like a Fighter. Live Like a Champion." },
-      { property: "og:image", content: heroImg },
-      { name: "twitter:image", content: heroImg },
-    ],
-  }),
-  component: HomePage,
-});
+
 
 const classes = [
   { name: "MMA", img: mmaImg, desc: "Mixed martial arts conditioning, grappling and striking." },
@@ -51,7 +39,7 @@ const testimonials = [
   { name: "Hedi M.", text: "Pro-level MMA coaching at a premium facility. Worth every dinar.", role: "Amateur fighter" },
 ];
 
-function HomePage() {
+export default function HomePage() {
   return (
     <>
       {/* HERO */}

@@ -1,19 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { SectionHeader } from "@/components/Section";
 
-export const Route = createFileRoute("/membership")({
-  head: () => ({
-    meta: [
-      { title: "Membership — GULZA GYM" },
-      { name: "description", content: "Flexible membership plans — from essential gym access to VIP combat coaching." },
-      { property: "og:title", content: "Membership — GULZA GYM" },
-      { property: "og:description", content: "Choose your path. Train like a champion." },
-    ],
-  }),
-  component: MembershipPage,
-});
+
 
 const plans = [
   { name: "Essential", price: "120", desc: "Open gym + your own pace.",
@@ -32,7 +22,7 @@ const compareRows = [
   { label: "Nutrition plan", v: [false, false, true] },
 ];
 
-function MembershipPage() {
+export default function MembershipPage() {
   return (
     <section className="py-20">
       <div className="container-x">
